@@ -71,8 +71,13 @@ pipeline {
                 // Use Ansible to deploy to production server
                 echo 'ansible-playbook deploy_production.yml'
             }
+        } 
+    stage('complete') {
+            steps {
+                // Run integration tests on the staging environment
+                echo 'completed'
+            }
         }
-
      
     }
 

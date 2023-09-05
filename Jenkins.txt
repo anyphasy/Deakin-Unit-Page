@@ -72,6 +72,12 @@ pipeline {
                 echo 'ansible-playbook deploy_production.yml'
             }
         }
+     stage('complete') {
+            steps {
+                // Use Ansible to deploy to production server
+                echo 'completed'
+            }
+        }
     }
 
 }
